@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfk84y1qq23dj"
+path="res://.godot/imported/floorENV.obj-2be07a09642c5a5aafc81ba08334f1d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floorENV.obj-2be07a09642c5a5aafc81ba08334f1d9.mesh"]
+
+source_file="res://Tiger/Objconversion/floorENV.obj"
+dest_files=["res://.godot/imported/floorENV.obj-2be07a09642c5a5aafc81ba08334f1d9.mesh", "res://.godot/imported/floorENV.obj-2be07a09642c5a5aafc81ba08334f1d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

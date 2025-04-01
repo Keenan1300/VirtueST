@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://byangcnklp3kf"
+path="res://.godot/imported/IslandSeparaters.obj-8067f0f1215351277b221002e64fc3ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/IslandSeparaters.obj-8067f0f1215351277b221002e64fc3ac.mesh"]
+
+source_file="res://Assets/Architecture/IslandSeparaters.obj"
+dest_files=["res://.godot/imported/IslandSeparaters.obj-8067f0f1215351277b221002e64fc3ac.mesh", "res://.godot/imported/IslandSeparaters.obj-8067f0f1215351277b221002e64fc3ac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

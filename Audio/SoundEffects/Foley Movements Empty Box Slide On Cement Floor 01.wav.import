@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://jx7e1v0pt3ok"
+path="res://.godot/imported/Foley Movements Empty Box Slide On Cement Floor 01.wav-ef1dface3c56cfdea85b0a1af4bddc96.sample"
+
+[deps]
+
+source_file="res://Audio/SoundEffects/Foley Movements Empty Box Slide On Cement Floor 01.wav"
+dest_files=["res://.godot/imported/Foley Movements Empty Box Slide On Cement Floor 01.wav-ef1dface3c56cfdea85b0a1af4bddc96.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

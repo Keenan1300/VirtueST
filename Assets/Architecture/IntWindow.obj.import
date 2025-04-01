@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgpgmws6g2e51"
+path="res://.godot/imported/IntWindow.obj-a0ab57144c3373b868ae41be476ff5db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/IntWindow.obj-a0ab57144c3373b868ae41be476ff5db.mesh"]
+
+source_file="res://Assets/Architecture/IntWindow.obj"
+dest_files=["res://.godot/imported/IntWindow.obj-a0ab57144c3373b868ae41be476ff5db.mesh", "res://.godot/imported/IntWindow.obj-a0ab57144c3373b868ae41be476ff5db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

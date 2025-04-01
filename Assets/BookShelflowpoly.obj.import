@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bri7w3erm2v5m"
+path="res://.godot/imported/BookShelflowpoly.obj-7fede7f0c6a3e3057de26ec4a822be07.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BookShelflowpoly.obj-7fede7f0c6a3e3057de26ec4a822be07.mesh"]
+
+source_file="res://Assets/BookShelflowpoly.obj"
+dest_files=["res://.godot/imported/BookShelflowpoly.obj-7fede7f0c6a3e3057de26ec4a822be07.mesh", "res://.godot/imported/BookShelflowpoly.obj-7fede7f0c6a3e3057de26ec4a822be07.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

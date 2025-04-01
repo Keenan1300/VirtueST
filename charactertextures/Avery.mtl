@@ -1,0 +1,22 @@
+# Blender 4.3.2 MTL File: 'None'
+# www.blender.org
+
+newmtl Hair
+Ns 0.000000
+Ka 0.768182 0.768182 0.768182
+Kd 0.018390 0.007457 0.003344
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_d C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/haircards/hair.png
+
+newmtl Material.001
+Ns 0.000000
+Ka 0.986364 0.986364 0.986364
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+illum 3
+map_Kd C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png
+map_Ke C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png
+map_d C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png

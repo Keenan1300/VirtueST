@@ -1,0 +1,12 @@
+# Blender 4.3.2 MTL File: 'None'
+# www.blender.org
+
+newmtl Material.003
+Ns 0.000000
+Ka 0.986364 0.986364 0.986364
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+illum 3
+map_Kd C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png
+map_Ke C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png
+map_d C:/Users/DANNY/Desktop/Renders and art/Art Central/VirtueStillborne/v5.png

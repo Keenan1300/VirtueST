@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cavwwel2qu4li"
+path="res://.godot/imported/Foley Metal Squeak 01.wav-1862b36ee1a053865d4ad84cc3d95784.sample"
+
+[deps]
+
+source_file="res://Audio/SoundEffects/Foley Metal Squeak 01.wav"
+dest_files=["res://.godot/imported/Foley Metal Squeak 01.wav-1862b36ee1a053865d4ad84cc3d95784.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

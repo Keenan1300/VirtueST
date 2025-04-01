@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd2ec0ai2s7b3"]
+
+[ext_resource type="Script" path="res://Lowpolyproject/Tiger/GLTFconversions/FPSSCRIPT.gd" id="1_4j0sf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_01gv2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b7k01"]
+size = Vector3(1, 2.09192, 0.526794)
+
+[node name="player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_4j0sf")
+
+[node name="MainRig" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MainRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04804, 0)
+mesh = SubResource("CapsuleMesh_01gv2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.762724, 0, 0, 0, 1, 0, 0, 0, 2.28483, 0.00284505, 1.03637, -0.032851)
+shape = SubResource("BoxShape3D_b7k01")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6601, 0.00686318)
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00528336, 0.024986, -0.0144593)

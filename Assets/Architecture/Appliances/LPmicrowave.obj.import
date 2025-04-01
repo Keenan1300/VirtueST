@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5lhd5gy8vdg6"
+path="res://.godot/imported/LPmicrowave.obj-d4921f12544ed6fb52a6b7fa6fa75a13.mesh"
+
+[deps]
+
+files=["res://.godot/imported/LPmicrowave.obj-d4921f12544ed6fb52a6b7fa6fa75a13.mesh"]
+
+source_file="res://Assets/Architecture/Appliances/LPmicrowave.obj"
+dest_files=["res://.godot/imported/LPmicrowave.obj-d4921f12544ed6fb52a6b7fa6fa75a13.mesh", "res://.godot/imported/LPmicrowave.obj-d4921f12544ed6fb52a6b7fa6fa75a13.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
