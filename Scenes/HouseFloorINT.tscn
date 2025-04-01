@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://u7afkcovtbye"]
+[gd_scene load_steps=59 format=3 uid="uid://u7afkcovtbye"]
 
 [ext_resource type="PackedScene" uid="uid://1caqd5o21n0y" path="res://Scenes/player_v.tscn" id="1_mjkr2"]
 [ext_resource type="Texture2D" uid="uid://m5mimwrns6p6" path="res://Assets/Enviro/HouseTrimSheet.png" id="1_tg2uj"]
@@ -29,6 +29,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dnfu3ohkpkat1" path="res://Assets/90sTable.obj" id="26_t4b0r"]
 [ext_resource type="PackedScene" uid="uid://gssgl50knk1x" path="res://Scenes/CharlieTest.tscn" id="27_057q8"]
 [ext_resource type="Script" uid="uid://dv8abiwv271mf" path="res://Scenes/CharlieLivingRoom1.gd" id="28_fatjg"]
+[ext_resource type="Script" uid="uid://ukv7uxk0y6s1" path="res://Scenes/CharlieDialogue1.gd" id="29_lnquq"]
 [ext_resource type="AudioStream" uid="uid://w5qntecsxb5e" path="res://Audio/SoundEffects/vinyl-effect-loop-110210.mp3" id="30_8js4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qil60"]
@@ -148,6 +149,9 @@ albedo_texture = ExtResource("1_tg2uj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf8ya"]
 albedo_texture = ExtResource("2_kh636")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lnquq"]
+size = Vector3(0.00738525, 1, 0.00544739)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_xftor")
@@ -791,6 +795,20 @@ material_override = SubResource("StandardMaterial3D_kf8ya")
 mesh = ExtResource("13_deshe")
 skeleton = NodePath("../RoomSeparator4")
 
-[node name="AnimateCharlie" parent="." instance=ExtResource("27_057q8")]
-transform = Transform3D(-4.24875e-08, 0, -0.972, 0, 0.972, 0, 0.972, 0, -4.24875e-08, 2, 2.16206, -31.8233)
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-5.12968e-05, 0, -1468.39, 0, 1215.41, 0, 1173.53, 0, -6.41851e-05, 2.80558, 3.92651, -31.1672)
+script = ExtResource("29_lnquq")
+
+[node name="AnimateCharlie" parent="StaticBody3D" instance=ExtResource("27_057q8")]
+transform = Transform3D(0.000911094, 0, -8.32667e-17, 0, 0.000879702, 0, 4.16334e-17, 0, 0.000728146, -0.000559101, -0.0016843, 0.000548617)
 script = ExtResource("28_fatjg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.383558, 0, 1.68754e-12, 0, 1.12589, 0, 4.26326e-14, 0, 0.577345, 0.000320859, 0.000431002, 0.000442229)
+shape = SubResource("BoxShape3D_lnquq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.795473, 0.00634578, 0.605955, 0, 0.999945, -0.0104718, -0.605988, -0.00833003, -0.79543, 3.85, 5.42, -32.39)
+fov = 64.9
+near = 0.409
+far = 3996.45

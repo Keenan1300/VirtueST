@@ -26,6 +26,16 @@ var _camera_input_direction := Vector2.ZERO
 @onready var interactpopup := $CameraPivot/SpringArm3D2/Camera3D/CanvasLayer
 
 func _input(event: InputEvent) -> void:
+	
+	if interactor.is_colliding():
+		var target = interactor.get_collider()
+		if target.has_method("interact"):
+			interactpopup.show();
+		else:
+			interactpopup.hide();
+	else:
+			interactpopup.hide();
+	
 	if event.is_action_pressed("left_click"):
 		Input.mouse_mode= Input.MOUSE_MODE_CAPTURED
 	if event.is_action_pressed("ui_cancel"):
@@ -39,9 +49,7 @@ func _unhandled_input(event:InputEvent) -> void:
 		_camera_input_direction = event.relative * mousesensitivity
 	
 	
-	#interactive
-	if Input.is_action_just_pressed("interact"):
-		interact_with_Object()
+
 
 func _physics_process(delta):
 	
@@ -58,7 +66,9 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	#interactive
+	if Input.is_action_just_pressed("interact"):
+		interact_with_Object()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -77,13 +87,6 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y -= gravity * delta *5
-	else:
-		if interactor.is_colliding():
-			var target = interactor.get_collider()
-			if target.has_method("interact"):
-				interactpopup.show();
-			else:
-				interactpopup.hide();
 	
 	
 	
@@ -107,4 +110,3 @@ func interact_with_Object():
 		var target = interactor.get_collider()
 		if target.has_method("interact"):
 			target.interact()
-
