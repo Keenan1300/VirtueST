@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1caqd5o21n0y" path="res://Scenes/player_v.tscn" id="1_mjkr2"]
 [ext_resource type="Texture2D" uid="uid://m5mimwrns6p6" path="res://Assets/Enviro/HouseTrimSheet.png" id="1_tg2uj"]
-[ext_resource type="Script" path="res://Scenes/HouseFloorINT.gd" id="1_xftor"]
+[ext_resource type="Script" uid="uid://c2ahrtq8qtukc" path="res://Scenes/HouseFloorINT.gd" id="1_xftor"]
 [ext_resource type="Texture2D" uid="uid://wrrf44qmxxap" path="res://Assets/Architecture/INTHouseTrimSheet2.png" id="2_kh636"]
 [ext_resource type="ArrayMesh" uid="uid://bgpgmws6g2e51" path="res://Assets/Architecture/IntWindow.obj" id="2_qcgg0"]
 [ext_resource type="Texture2D" uid="uid://ncm666rhx5pr" path="res://Assets/Enviro/HouseTrimSheetEM.png" id="2_svyov"]
@@ -11,7 +11,7 @@
 [ext_resource type="ArrayMesh" uid="uid://rqlxd45djqln" path="res://Assets/Architecture/HalfWall.obj" id="4_s7rsw"]
 [ext_resource type="ArrayMesh" uid="uid://y03b4yvn1mwv" path="res://Assets/Architecture/DoorFrame.obj" id="5_nd440"]
 [ext_resource type="ArrayMesh" uid="uid://585wjfjhhvt" path="res://Assets/Architecture/Wall.obj" id="5_t08ty"]
-[ext_resource type="Script" path="res://Scenes/FrontDoorInteract.gd" id="11_gkhh2"]
+[ext_resource type="Script" uid="uid://dano27mhyp0xl" path="res://Scenes/FrontDoorInteract.gd" id="11_gkhh2"]
 [ext_resource type="ArrayMesh" uid="uid://cq7su1oqkvspk" path="res://Assets/Architecture/RoomSeparator.obj" id="12_inqv6"]
 [ext_resource type="ArrayMesh" uid="uid://du0nhh2wrpm01" path="res://Assets/Architecture/Tiles.obj" id="13_deshe"]
 [ext_resource type="Texture2D" uid="uid://c5si7dxuo804b" path="res://Assets/Architecture/Appliances/ApplianceTrimSheet.png" id="14_w3ciq"]
@@ -21,14 +21,14 @@
 [ext_resource type="ArrayMesh" uid="uid://bmx0fk3quyat" path="res://Assets/Architecture/Appliances/MiniUpperCabinet.obj" id="18_68did"]
 [ext_resource type="ArrayMesh" uid="uid://c1wqwtdp316qn" path="res://Assets/Architecture/Appliances/UpperSingleCabinet.obj" id="19_hwfal"]
 [ext_resource type="ArrayMesh" uid="uid://b5lhd5gy8vdg6" path="res://Assets/Architecture/Appliances/LPmicrowave.obj" id="20_oew40"]
-[ext_resource type="Texture2D" uid="uid://c7jyfjol318a5" path="res://Assets/Pix.png" id="21_2oj66"]
 [ext_resource type="ArrayMesh" uid="uid://c3ma1whyrond" path="res://Assets/Bed.obj" id="22_0o2eq"]
+[ext_resource type="Texture2D" uid="uid://bsus8hr8lv8ro" path="res://Assets/Enviro/Pix.png" id="22_b4omo"]
 [ext_resource type="Texture2D" uid="uid://d3cpuy6bw08uu" path="res://Assets/Architecture/INTHouseTrimSheet.png" id="23_htko3"]
 [ext_resource type="ArrayMesh" uid="uid://cgorydp7vaxj8" path="res://Assets/Couch.obj" id="24_ro0r7"]
 [ext_resource type="ArrayMesh" uid="uid://c4gb40a4adhxi" path="res://Assets/TV.obj" id="25_go5i8"]
 [ext_resource type="ArrayMesh" uid="uid://dnfu3ohkpkat1" path="res://Assets/90sTable.obj" id="26_t4b0r"]
 [ext_resource type="PackedScene" uid="uid://gssgl50knk1x" path="res://Scenes/CharlieTest.tscn" id="27_057q8"]
-[ext_resource type="Script" path="res://Scenes/CharlieLivingRoom1.gd" id="28_fatjg"]
+[ext_resource type="Script" uid="uid://dv8abiwv271mf" path="res://Scenes/CharlieLivingRoom1.gd" id="28_fatjg"]
 [ext_resource type="AudioStream" uid="uid://w5qntecsxb5e" path="res://Audio/SoundEffects/vinyl-effect-loop-110210.mp3" id="30_8js4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qil60"]
@@ -129,7 +129,7 @@ albedo_texture = ExtResource("14_w3ciq")
 albedo_texture = ExtResource("14_w3ciq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4o0ui"]
-albedo_texture = ExtResource("21_2oj66")
+albedo_texture = ExtResource("22_b4omo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2se7"]
 albedo_texture = ExtResource("23_htko3")
@@ -168,7 +168,7 @@ mesh = SubResource("BoxMesh_8swt1")
 skeleton = NodePath("../..")
 
 [node name="playerV" parent="." groups=["CameraController"] instance=ExtResource("1_mjkr2")]
-transform = Transform3D(-1.19472, 0, -3.13337e-07, 0, 1.19472, 0, 3.13337e-07, 0, -1.19472, -7.15729, 0.469826, -19.9851)
+transform = Transform3D(-1.0645, 0, -2.79183e-07, 0, 1.0645, 0, 2.79183e-07, 0, -1.0645, -7.15729, 0.61451, -19.9851)
 
 [node name="Node3D" type="Node3D" parent="."]
 
