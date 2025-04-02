@@ -799,6 +799,12 @@ skeleton = NodePath("../RoomSeparator4")
 transform = Transform3D(-5.12968e-05, 0, -1468.39, 0, 1215.41, 0, 1173.53, 0, -6.41851e-05, 2.80558, 3.92651, -31.1672)
 script = ExtResource("29_lnquq")
 
+[node name="Charlie1Camera" type="Camera3D" parent="StaticBody3D"]
+transform = Transform3D(-0.000516381, -7.09827e-06, -0.00067781, 0, 0.000822723, -8.61585e-06, 0.000541732, -4.32159e-06, -0.000412666, -0.00104198, 0.0012288, -0.000711269)
+fov = 83.5
+near = 0.409
+far = 3996.45
+
 [node name="AnimateCharlie" parent="StaticBody3D" instance=ExtResource("27_057q8")]
 transform = Transform3D(0.000911094, 0, -8.32667e-17, 0, 0.000879702, 0, 4.16334e-17, 0, 0.000728146, -0.000559101, -0.0016843, 0.000548617)
 script = ExtResource("28_fatjg")
@@ -806,9 +812,3 @@ script = ExtResource("28_fatjg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(0.383558, 0, 1.68754e-12, 0, 1.12589, 0, 4.26326e-14, 0, 0.577345, 0.000320859, 0.000431002, 0.000442229)
 shape = SubResource("BoxShape3D_lnquq")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.795473, 0.00634578, 0.605955, 0, 0.999945, -0.0104718, -0.605988, -0.00833003, -0.79543, 3.85, 5.42, -32.39)
-fov = 64.9
-near = 0.409
-far = 3996.45
