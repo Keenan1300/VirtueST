@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://u7afkcovtbye"]
+[gd_scene load_steps=64 format=3 uid="uid://u7afkcovtbye"]
 
 [ext_resource type="PackedScene" uid="uid://1caqd5o21n0y" path="res://Scenes/player_v.tscn" id="1_mjkr2"]
 [ext_resource type="Texture2D" uid="uid://m5mimwrns6p6" path="res://Assets/Enviro/HouseTrimSheet.png" id="1_tg2uj"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dano27mhyp0xl" path="res://Scenes/FrontDoorInteract.gd" id="11_gkhh2"]
 [ext_resource type="ArrayMesh" uid="uid://cq7su1oqkvspk" path="res://Assets/Architecture/RoomSeparator.obj" id="12_inqv6"]
 [ext_resource type="ArrayMesh" uid="uid://du0nhh2wrpm01" path="res://Assets/Architecture/Tiles.obj" id="13_deshe"]
+[ext_resource type="Script" uid="uid://df6x4utwllrrl" path="res://Scenes/Portal1.gd" id="14_asr4h"]
 [ext_resource type="Texture2D" uid="uid://c5si7dxuo804b" path="res://Assets/Architecture/Appliances/ApplianceTrimSheet.png" id="14_w3ciq"]
 [ext_resource type="ArrayMesh" uid="uid://bu056e2jnnxcd" path="res://Assets/Architecture/Appliances/StandardCabinet.obj" id="15_vguf5"]
 [ext_resource type="ArrayMesh" uid="uid://d2eml6iabh6l8" path="res://Assets/Architecture/Appliances/LPOven.obj" id="16_rpl3l"]
@@ -31,6 +32,8 @@
 [ext_resource type="Script" uid="uid://dv8abiwv271mf" path="res://Scenes/CharlieLivingRoom1.gd" id="28_fatjg"]
 [ext_resource type="Script" uid="uid://ukv7uxk0y6s1" path="res://Scenes/CharlieDialogue1.gd" id="29_lnquq"]
 [ext_resource type="AudioStream" uid="uid://w5qntecsxb5e" path="res://Audio/SoundEffects/vinyl-effect-loop-110210.mp3" id="30_8js4w"]
+[ext_resource type="Script" uid="uid://kkfclb18d72k" path="res://Scenes/InteractEPopup.gd" id="33_e746h"]
+[ext_resource type="PackedScene" uid="uid://digyc81wilcv4" path="res://Scenes/DialogueBars.tscn" id="34_n64gp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qil60"]
 sky_top_color = Color(0.466667, 0.45098, 0.376471, 1)
@@ -38,14 +41,14 @@ sky_horizon_color = Color(0.666667, 0.654995, 0.627368, 1)
 sky_energy_multiplier = 0.85
 ground_horizon_color = Color(0.666667, 0.654995, 0.627368, 1)
 
-[sub_resource type="Sky" id="Sky_fhfep"]
+[sub_resource type="Sky" id="Sky_asr4h"]
 sky_material = SubResource("ProceduralSkyMaterial_qil60")
 
 [sub_resource type="Environment" id="Environment_7vlmq"]
 background_mode = 1
 background_color = Color(0.443137, 0.294118, 0.113725, 1)
 background_energy_multiplier = 3.02
-sky = SubResource("Sky_fhfep")
+sky = SubResource("Sky_asr4h")
 ambient_light_color = Color(0.803922, 0.564706, 0, 1)
 ambient_light_energy = 3.76
 tonemap_mode = 3
@@ -106,7 +109,14 @@ emission_operator = 1
 emission_texture = ExtResource("2_svyov")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_llus2"]
-size = Vector3(0.00843457, 0.0094135, 0.0122822)
+size = Vector3(0.0100767, 0.0094135, 0.0122822)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bu5b5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e746h"]
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 9.65
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvut1"]
 albedo_color = Color(0.290196, 0.129412, 0.0980392, 1)
@@ -166,10 +176,9 @@ volume_db = 20.8
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7vlmq")
 
-[node name="ROOF" type="MeshInstance3D" parent="WorldEnvironment"]
+[node name="ROOF" type="MeshInstance3D" parent="."]
 transform = Transform3D(52.567, 0, 0, 0, 0.541531, 0, 0, 0, 27.7456, 14.2908, 9.34034, -26.8308)
 mesh = SubResource("BoxMesh_8swt1")
-skeleton = NodePath("../..")
 
 [node name="playerV" parent="." groups=["CameraController"] instance=ExtResource("1_mjkr2")]
 transform = Transform3D(-1.0645, 0, -2.79183e-07, 0, 1.0645, 0, 2.79183e-07, 0, -1.0645, -7.15729, 0.61451, -19.9851)
@@ -520,6 +529,20 @@ spot_angle_attenuation = 1.62451
 transform = Transform3D(0.713428, 0, -1.42109e-14, 0, 0.773118, 0, -1.77636e-15, 0, 0.813054, 0.00125144, 0.00133481, -2.22735e-05)
 shape = SubResource("BoxShape3D_llus2")
 
+[node name="Portal2" type="StaticBody3D" parent="."]
+transform = Transform3D(-1.21804e-05, 0, 379.309, 0, 786.54, 0, -278.656, 0, -1.65801e-05, 23.8721, 4.6701, -23.1063)
+script = ExtResource("14_asr4h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal2"]
+transform = Transform3D(1.3744, 0, 7.10543e-15, 0, 0.773118, 0, 3.55271e-15, 0, 0.813054, 0.00023827, 0.00078086, -2.22698e-05)
+shape = SubResource("BoxShape3D_llus2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal2"]
+transform = Transform3D(-6.76882e-10, 0, -0.00104583, 0, 0.00767728, 0, 0.0113761, 0, -3.3584e-11, -0.00195184, 0.000355232, 0.000211112)
+mesh = SubResource("BoxMesh_bu5b5")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_e746h")
+
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D2" type="SpotLight3D" parent="Lights"]
@@ -795,20 +818,26 @@ material_override = SubResource("StandardMaterial3D_kf8ya")
 mesh = ExtResource("13_deshe")
 skeleton = NodePath("../RoomSeparator4")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="CharlieInteraction" type="StaticBody3D" parent="."]
 transform = Transform3D(-5.12968e-05, 0, -1468.39, 0, 1215.41, 0, 1173.53, 0, -6.41851e-05, 2.80558, 3.92651, -31.1672)
 script = ExtResource("29_lnquq")
 
-[node name="Charlie1Camera" type="Camera3D" parent="StaticBody3D"]
+[node name="Charlie1Camera" type="Camera3D" parent="CharlieInteraction"]
 transform = Transform3D(-0.000516381, -7.09827e-06, -0.00067781, 0, 0.000822723, -8.61585e-06, 0.000541732, -4.32159e-06, -0.000412666, -0.00104198, 0.0012288, -0.000711269)
 fov = 83.5
 near = 0.409
 far = 3996.45
 
-[node name="AnimateCharlie" parent="StaticBody3D" instance=ExtResource("27_057q8")]
-transform = Transform3D(0.000911094, 0, -8.32667e-17, 0, 0.000879702, 0, 4.16334e-17, 0, 0.000728146, -0.000559101, -0.0016843, 0.000548617)
+[node name="AnimateCharlie" parent="CharlieInteraction" instance=ExtResource("27_057q8")]
+transform = Transform3D(0.000909472, -5.24631e-05, 4.51895e-14, 5.43353e-05, 0.000878136, -1.51701e-12, 5.66942e-14, 1.83275e-12, 0.000728146, -0.000559101, -0.00159968, 0.000548617)
 script = ExtResource("28_fatjg")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharlieInteraction"]
 transform = Transform3D(0.383558, 0, 1.68754e-12, 0, 1.12589, 0, 4.26326e-14, 0, 0.577345, 0.000320859, 0.000431002, 0.000442229)
 shape = SubResource("BoxShape3D_lnquq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharlieInteraction"]
+visible = false
+script = ExtResource("33_e746h")
+
+[node name="Control" parent="CharlieInteraction/CanvasLayer" instance=ExtResource("34_n64gp")]
