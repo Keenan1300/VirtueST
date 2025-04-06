@@ -1,3 +1,4 @@
 CharlieBones: This is a dialogue test, poser.
 set {Charlie1Interact} = false
+[signal arg="istalking = false"]
 [end_timeline]

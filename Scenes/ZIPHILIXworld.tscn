@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba033ajbcsdci"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_didof"]
+sky_top_color = Color(0.982878, 0.000637829, 0.95525, 1)
+sky_horizon_color = Color(1, 0.488, 0.04, 1)
+sky_curve = 0.204906
+sky_energy_multiplier = 5.59
+sky_cover_modulate = Color(0.152484, 0.68563, 0, 1)
+ground_horizon_color = Color(0.666667, 0.654995, 0.627368, 1)
+sun_angle_max = 0.0
+sun_curve = 0.289781
+
+[sub_resource type="Sky" id="Sky_fhfep"]
+sky_material = SubResource("ProceduralSkyMaterial_didof")
+
+[sub_resource type="Environment" id="Environment_sw0tb"]
+background_mode = 2
+background_color = Color(0.0752288, 0, 0.510415, 1)
+background_energy_multiplier = 0.4
+sky = SubResource("Sky_fhfep")
+ambient_light_source = 1
+ambient_light_color = Color(0, 0.700224, 0.727906, 1)
+ambient_light_energy = 16.0
+reflected_light_source = 1
+tonemap_exposure = 0.3
+tonemap_white = 9.28
+ssr_enabled = true
+glow_enabled = true
+glow_intensity = 0.16
+glow_strength = 1.44
+glow_bloom = 0.17
+fog_enabled = true
+fog_light_color = Color(0.0781047, 0.52278, 0.468542, 1)
+fog_light_energy = 4.82
+fog_sun_scatter = 0.1
+fog_density = 0.0301
+fog_sky_affect = 0.114
+fog_height = -31.41
+fog_height_density = 1.8316
+volumetric_fog_density = 0.0155
+volumetric_fog_albedo = Color(0.541176, 0.768627, 0.458824, 1)
+volumetric_fog_emission = Color(0.952655, 0.254472, 1, 1)
+volumetric_fog_emission_energy = 36.31
+volumetric_fog_anisotropy = 0.03
+volumetric_fog_length = 169.93
+volumetric_fog_detail_spread = 1.7411
+volumetric_fog_sky_affect = 0.56
+
+[sub_resource type="BoxMesh" id="BoxMesh_didof"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sw0tb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(181.123, 0, 0, 0, 0.552473, 0, 0, 0, 149.223, 0, -9.70821, 0)
+mesh = SubResource("BoxMesh_didof")

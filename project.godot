@@ -22,14 +22,18 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"CharlieBones": "res://DLGCCharacterEvents/CharlieBones/CharlieBones.dch"
+"CharlieBones": "res://DLGCCharacterEvents/CharlieBones/CharlieBones.dch",
+"Claudma": "res://Assets/Characters/Cluadma/Claudma.dch"
 }
 directories/dtl_directory={
 "CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
+"Cluadmatimeline": "res://DLGCCharacterEvents/Cluadma/Cluadmatimeline.dtl",
 "INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl"
 }
 variables={
-"Charlie1Interact": false
+"Charlie1Interact": false,
+"ClaudmaInteract": false,
+"ZIHPILIXBOOL": false
 }
 layout/style_list=["res://DLGCCharacterEvents/DefaultCryptic.tres"]
 layout/default_style="res://DLGCCharacterEvents/DefaultCryptic.tres"
@@ -67,6 +71,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+glossary/glossary_files=["res://DLGCSceneEvents/New_File.tres"]
 
 [editor_plugins]
 

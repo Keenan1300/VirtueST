@@ -1,0 +1,4 @@
+Claudma: Hello, Virtue.
+set {ClaudmaInteract} = false
+[signal arg="istalking = false"]
+[end_timeline]

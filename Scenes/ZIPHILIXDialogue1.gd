@@ -2,7 +2,7 @@ extends StaticBody3D
 @onready var Charlie1Camera: Camera3D = $Charlie1Camera
 @onready var donedialogue1 = false
 @onready var cinematicbars = $CanvasLayer
-@onready var player = $"../playerV"
+
 func _ready():
 	Dialogic.VAR.Charlie1Interact = true
 
@@ -26,6 +26,5 @@ func interact():
 	print("INTERACTED WITH") 
 
 func endinteraction():
-	player.istalking = false
 	$Charlie1Camera.current = false
 	print("Isover")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bovuo8vl2uq75"
+path="res://.godot/imported/Foley Cloth Hit And Short Rustle Cloth 05.wav-8adfa336c9b052fca6e35ffb0589221c.sample"
+
+[deps]
+
+source_file="res://Audio/TypeAudio/Foley Cloth Hit And Short Rustle Cloth 05.wav"
+dest_files=["res://.godot/imported/Foley Cloth Hit And Short Rustle Cloth 05.wav-8adfa336c9b052fca6e35ffb0589221c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

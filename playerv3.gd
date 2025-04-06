@@ -10,6 +10,8 @@ var rotspeed = 8
 var lstdirection = Vector3.FORWARD
 var lstmovdirection = Vector3.BACK
 
+var istalking = false
+
 var _camera_input_direction := Vector2.ZERO
 @export_group("Camera")
 @export_range(0.0,1.0) var mousesensitivity := 0.25
@@ -83,7 +85,8 @@ func _physics_process(delta):
 	move_direction.y = 0.0
 	move_direction = move_direction.normalized()
 	
-	velocity = velocity.move_toward(move_direction * move_speed, acceleration  * delta)
+	if istalking == false:
+		velocity = velocity.move_toward(move_direction * move_speed, acceleration  * delta)
 	
 	if not is_on_floor():
 		velocity.y -= gravity * delta *5
@@ -95,7 +98,8 @@ func _physics_process(delta):
 	if move_direction.length() > 0.2:
 		lstmovdirection = move_direction
 	var targetangle  := Vector3.BACK.signed_angle_to(lstmovdirection, Vector3.UP)
-	_skin.global_rotation.y = lerp_angle(_skin.global_rotation.y, targetangle, rotspeed * delta)
+	if istalking == false:
+		_skin.global_rotation.y = lerp_angle(_skin.global_rotation.y, targetangle, rotspeed * delta)
 	
 	
 	var groundspeed := velocity.length()
@@ -110,3 +114,4 @@ func interact_with_Object():
 		var target = interactor.get_collider()
 		if target.has_method("interact"):
 			target.interact()
+			istalking = true
