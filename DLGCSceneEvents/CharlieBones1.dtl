@@ -1,4 +1,5 @@
+[signal arg="CONVOSTART"]
 CharlieBones: This is a dialogue test, poser.
 set {Charlie1Interact} = false
-[signal arg="istalking = false"]
+[signal arg="CONVOISOVER"]
 [end_timeline]

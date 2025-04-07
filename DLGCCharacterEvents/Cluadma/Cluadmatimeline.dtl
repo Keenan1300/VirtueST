@@ -1,4 +1,5 @@
+[signal arg="CONVOSTART"]
 Claudma: Hello, Virtue.
 set {ClaudmaInteract} = false
-[signal arg="istalking = false"]
+[signal arg="CONVOISOVER"]
 [end_timeline]

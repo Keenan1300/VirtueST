@@ -27,6 +27,9 @@ var _camera_input_direction := Vector2.ZERO
 @onready var interactor := $CameraPivot/interactor #RayCast3D Referecne
 @onready var interactpopup := $CameraPivot/SpringArm3D2/Camera3D/CanvasLayer
 
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
 func _input(event: InputEvent) -> void:
 	
 	if interactor.is_colliding():
@@ -55,7 +58,11 @@ func _unhandled_input(event:InputEvent) -> void:
 
 func _physics_process(delta):
 	
-	
+	if istalking == true:
+		move_speed = 0
+	else:
+		if istalking == false:
+			move_speed = 5
 	
 	_camera_pivot.rotation.x += _camera_input_direction.y * delta
 	_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, -PI / 6.0, PI/ 3.0)
@@ -64,13 +71,15 @@ func _physics_process(delta):
 	_camera_input_direction = Vector2.ZERO
 	
 
+	var groundspeed := velocity.length()
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	#interactive
-	if Input.is_action_just_pressed("interact"):
-		interact_with_Object()
+	if groundspeed == 0.0:
+		if Input.is_action_just_pressed("interact"):
+			interact_with_Object()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -94,7 +103,6 @@ func _physics_process(delta):
 	
 	
 	move_and_slide()
-	
 	if move_direction.length() > 0.2:
 		lstmovdirection = move_direction
 	var targetangle  := Vector3.BACK.signed_angle_to(lstmovdirection, Vector3.UP)
@@ -102,16 +110,26 @@ func _physics_process(delta):
 		_skin.global_rotation.y = lerp_angle(_skin.global_rotation.y, targetangle, rotspeed * delta)
 	
 	
-	var groundspeed := velocity.length()
+	
 	
 	if groundspeed > 0.0:
 		_anim.walk()
 	else:
 		_anim.idle()
 	
+	
+	
+
+
+func _on_dialogic_signal(argument:String):
+	if argument == "CONVOISOVER":
+		istalking = false
+		print("Talking Stopped")
+	if argument == "CONVOSTART":
+		istalking = true
+
 func interact_with_Object():
 	if interactor.is_colliding():
 		var target = interactor.get_collider()
 		if target.has_method("interact"):
 			target.interact()
-			istalking = true
