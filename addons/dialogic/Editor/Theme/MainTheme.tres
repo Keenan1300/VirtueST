@@ -1,3 +1,6 @@
-[gd_resource type="Theme" format=3 uid="uid://cqst728xxipcw"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cqst728xxipcw"]
+
+[ext_resource type="FontFile" uid="uid://bhgx325wllx6t" path="res://Fonts/RomanAntique.ttf" id="1_evja5"]
 
 [resource]
+default_font = ExtResource("1_evja5")

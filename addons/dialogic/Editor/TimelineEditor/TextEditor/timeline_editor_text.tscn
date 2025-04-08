@@ -1,17 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://defdeav8rli6o"]
+[gd_scene load_steps=4 format=3 uid="uid://defdeav8rli6o"]
 
 [ext_resource type="Script" uid="uid://chvduqvmveo5" path="res://addons/dialogic/Editor/TimelineEditor/TextEditor/timeline_editor_text.gd" id="1_1kbx2"]
+[ext_resource type="Theme" uid="uid://bcjx433x5uoua" path="res://addons/dialogic/Editor/Theme/PickerTheme.tres" id="1_vjq8s"]
+[ext_resource type="FontFile" uid="uid://bhgx325wllx6t" path="res://Fonts/RomanAntique.ttf" id="2_2kavm"]
 
 [node name="TimelineTextEditor" type="CodeEdit"]
 offset_top = 592.0
 offset_right = 1024.0
 offset_bottom = 600.0
-theme_override_constants/line_spacing = 10
+theme = ExtResource("1_vjq8s")
+theme_override_constants/line_spacing = 60
+theme_override_fonts/font = ExtResource("2_2kavm")
 wrap_mode = 1
-highlight_current_line = true
-draw_tabs = true
 minimap_draw = true
 caret_blink = true
+highlight_current_line = true
+draw_tabs = true
 line_folding = true
 gutters_draw_line_numbers = true
 gutters_draw_fold_gutter = true

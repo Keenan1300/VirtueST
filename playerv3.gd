@@ -17,7 +17,7 @@ var _camera_input_direction := Vector2.ZERO
 @export_range(0.0,1.0) var mousesensitivity := 0.25
 
 @export_group("Movement")
-@export var move_speed := 8.0
+@export var move_speed := 10.0
 @export var acceleration := 20.0
 
 @onready var _camera_pivot: Node3D = %CameraPivot
