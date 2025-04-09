@@ -17,7 +17,7 @@ script = ExtResource("2_jpsux")
 scene = ExtResource("1_lw0qw")
 overrides = {
 "canvas_layer": "8.0",
-"global_font": "\"res://Fonts/RomanAntique.ttf\"",
+"global_font": "\"res://Fonts/TIMES.TTF\"",
 "global_font_color": "Color(1, 0.95625, 0.866667, 1)",
 "global_font_size": "22.0"
 }
@@ -42,9 +42,9 @@ script = ExtResource("2_jpsux")
 scene = ExtResource("6_kat0e")
 overrides = {
 "box_margin_bottom": "25.0",
-"italics_font": "\"res://Fonts/RomanAntique-Italic.ttf\"",
+"italics_font": "\"res://Fonts/TIMES.TTF\"",
 "name_label_custom_font_size": "40.0",
-"normal_font": "\"res://Fonts/RomanAntique.ttf\"",
+"normal_font": "\"res://Fonts/TIMES.TTF\"",
 "text_custom_color": "Color(0.917969, 0.778402, 0.537872, 1)"
 }
 
@@ -88,4 +88,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_jpsux")]([])
-metadata/_latest_layer = "15"
+metadata/_latest_layer = "13"

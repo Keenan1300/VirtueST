@@ -1,6 +1,6 @@
 [signal arg="CONVOSTART"]
 Claudma: Hello, Virtue.
-- who are you?
+- Who are you?
 	Claudma: We are Claudma
 	Claudma: With us begins motion
 	Claudma: With us ends spirit
@@ -13,11 +13,31 @@ Claudma: Hello, Virtue.
 		Virtue: You want me to be the defence attorney of humanity?
 		Claudma: As it is in your presence here, yes.
 		Virtue: ...
-		Virtue: Seems tough.
-		Virtue: But I've definetly took harder cases.
-	set {ClaudmaInteract} = false
-	[signal arg="CONVOISOVER"]
-	[end_timeline]
+		Virtue: I've took on harder cases.
+		Virtue: Although I cant say this isnt a bit unorthodox.
+		Virtue: If'n any other case I spoke to the jury before a trial I'd be disbarred immediatley. Odd rules you people play by.
+		label DialogueBody
+		- What are your thoughts on humanity?
+			Virtue: As stated in the contract, the defendant is accused of various, as it was put, "profane crimes against existence"
+			Virtue:  before moving to court with this, do you have any comments related to these allegations?
+			Claudma: For what little time man has walked they have stepped upon the worlds of many
+			Claudma: With each footprint, worlds destroyed. Cries of a thousand lives. Thousands of civilizations extinguished like that of a candle.
+			Claudma: Of all humans that walk none speak of the sanctity of ground. Not dirt, but ground. The spirits that lie beneath the quilts of fabric upon which existence predicates itself
+			Claudma: I do not desire to make humanity one of these extinguished lives. However, you must first understand what it means to walk on ground before you can convince the other timeless ones.
+			Virtue: ... 
+			Virtue: Ok
+			Virtue: Well... thanks for that I guess... I'll keep that in mind in the courts.
+			jump DialogueBody
+		- Im the best there is
+			Virtue: As far as criminal defence attorneys go, I can assure you. You've hired the best. 
+			Claudma: May that be known in due time.
+			Claudma: But let not this heir of hubris possess you. For you walk among endless ones.
+			jump DialogueBody
+			[end_timeline]
+		- (Exit Conversation)
+			set {ClaudmaInteract} = false
+			[signal arg="CONVOISOVER"]
+			[end_timeline]
 - Are you my client?
 	Claudma: Careful with whom you speak, Virtue
 	Claudma: We are Claudma
@@ -26,13 +46,4 @@ Claudma: Hello, Virtue.
 	Claudma: ..and with us it repeats
 	Claudma: ...
 	Virtue: (I think they want me to speak)
-	set {ClaudmaInteract} = false
-	- The contract
-		Virtue: Im here to discuss our contract...
-		Virtue: You want me to be the defence attorney of humanity?
-		Claudma: As it is in your presence here, yes.
-		Virtue: ...
-		Virtue: Seems tough.
-		Virtue: But I've definetly took harder cases.
-	[signal arg="CONVOISOVER"]
-	[end_timeline]
+	jump DialogueBody
