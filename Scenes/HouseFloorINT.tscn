@@ -193,7 +193,7 @@ transform = Transform3D(30.3134, 0, 0, 0, 0.406394, 0, 0, 0, 5.90103, 3.1444, 9.
 mesh = SubResource("BoxMesh_8swt1")
 
 [node name="playerV" parent="." groups=["CameraController"] instance=ExtResource("1_mjkr2")]
-transform = Transform3D(-1.0645, 0, -2.79183e-07, 0, 1.0645, 0, 2.79183e-07, 0, -1.0645, -7.15729, 0.61451, -19.9851)
+transform = Transform3D(-1.0645, 0, -2.79183e-07, 0, 1.0645, 0, 2.79183e-07, 0, -1.0645, -5.10787, 0.61451, -15.8586)
 
 [node name="Node3D" type="Node3D" parent="."]
 

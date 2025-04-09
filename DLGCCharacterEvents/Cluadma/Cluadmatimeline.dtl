@@ -1,5 +1,10 @@
 [signal arg="CONVOSTART"]
 Claudma: Hello, Virtue.
-set {ClaudmaInteract} = false
-[signal arg="CONVOISOVER"]
-[end_timeline]
+- who are you?
+	set {ClaudmaInteract} = false
+	[signal arg="CONVOISOVER"]
+	[end_timeline]
+- Your my client, right?
+	set {ClaudmaInteract} = false
+	[signal arg="CONVOISOVER"]
+	[end_timeline]

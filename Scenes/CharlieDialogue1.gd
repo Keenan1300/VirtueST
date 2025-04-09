@@ -3,8 +3,10 @@ extends StaticBody3D
 @onready var donedialogue1 = false
 @onready var cinematicbars = $CanvasLayer
 @onready var player = $"../playerV"
+
+
 func _ready():
-	Dialogic.VAR.Charlie1Interact = true
+	Dialogic.VAR.Charlie1Interact = false
 
 func _process(delta):
 	
@@ -16,13 +18,11 @@ func _process(delta):
 		pass
 
 func interact():
-	Dialogic.start("CharlieBones1")
+	Dialogic.start("timeline")
 	cinematicbars.show();
 	$Charlie1Camera.current = true
 	Dialogic.VAR.Charlie1Interact = true
 	##Dialogic thing goes here
-	
-	Dialogic.start("CharlieBones1")
 	
 	print("INTERACTED WITH") 
 

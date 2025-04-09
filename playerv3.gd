@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 var animationspeed = 5
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -27,8 +27,20 @@ var _camera_input_direction := Vector2.ZERO
 @onready var interactor := $CameraPivot/interactor #RayCast3D Referecne
 @onready var interactpopup := $CameraPivot/SpringArm3D2/Camera3D/CanvasLayer
 
+var sideentrance = false
+
+
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+	var SideEntrancePosition = Vector3(33.402,0.615,-15.61)
+	if sideentrance == true:
+		self.transform.origin = SideEntrancePosition
+		sideentrance = false
+	else:
+		pass
+	
+
 
 func _input(event: InputEvent) -> void:
 	
@@ -57,6 +69,9 @@ func _unhandled_input(event:InputEvent) -> void:
 
 
 func _physics_process(delta):
+	
+	
+	
 	
 	if istalking == true:
 		move_speed = 0

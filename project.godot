@@ -26,9 +26,11 @@ directories/dch_directory={
 "Claudma": "res://Assets/Characters/Cluadma/Claudma.dch"
 }
 directories/dtl_directory={
+"CharlieBones/CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",
 "CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
 "Cluadmatimeline": "res://DLGCCharacterEvents/Cluadma/Cluadmatimeline.dtl",
-"INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl"
+"INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl",
+"timeline": "res://DLGCCharacterEvents/CharlieBones/timeline.dtl"
 }
 variables={
 "Charlie1Interact": false,
