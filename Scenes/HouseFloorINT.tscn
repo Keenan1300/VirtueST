@@ -185,7 +185,7 @@ transform = Transform3D(52.567, 0, 0, 0, 0.406394, 0, 0, 0, 21.1831, 14.2908, 9.
 mesh = SubResource("BoxMesh_8swt1")
 
 [node name="ROOF2" type="MeshInstance3D" parent="."]
-transform = Transform3D(11.2657, 0, 0, 0, 0.406394, 0, 0, 0, 5.74462, 34.8085, 9.17194, -37.5244)
+transform = Transform3D(11.2657, 0, 0, 0, 0.406394, 0, 0, 0, 5.98847, 34.8085, 9.17194, -37.5244)
 mesh = SubResource("BoxMesh_8swt1")
 
 [node name="ROOF3" type="MeshInstance3D" parent="."]
@@ -325,12 +325,6 @@ material_override = SubResource("StandardMaterial3D_hxnef")
 mesh = ExtResource("5_t08ty")
 skeleton = NodePath("../HalfWall")
 
-[node name="Wall3" type="MeshInstance3D" parent="Node3D/Walls"]
-transform = Transform3D(-7.43093e-08, 0, -1.7, 0, 1.7, 0, 2.00391, 0, -8.75936e-08, -12, 17.5357, -32)
-material_override = SubResource("StandardMaterial3D_hxnef")
-mesh = ExtResource("5_t08ty")
-skeleton = NodePath("../HalfWall")
-
 [node name="HalfWall" type="MeshInstance3D" parent="Node3D/Walls"]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 2.00391, -1.33184, 5, -17)
 material_override = SubResource("StandardMaterial3D_uj4ru")
@@ -357,6 +351,114 @@ skeleton = NodePath("../../..")
 
 [node name="HalfWall4" type="MeshInstance3D" parent="Node3D/Walls"]
 transform = Transform3D(-7.43094e-08, 0, 2.41976, 0, 1.7, 0, -1.7, 0, -1.05771e-07, 36.4435, 5.08552, -40.2201)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="Wall19" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, 4.66703, 13, -40.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall20" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.92809, 0, 1.48619e-07, 0, 1.7, 0, -1.98692e-07, 0, -2.00391, 15.9311, 13, -40.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall21" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, 27.2082, 13, -40.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="HalfWall6" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-8.45678e-08, 0, 2.41976, 0, 1.7, 0, -1.93469, 0, -1.05771e-07, 36.3536, 13.0855, -40.1708)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="Wall22" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, 4.66703, 13, -14.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall25" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, -6.56233, 13, -40.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall26" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, -6.56233, 13, -14.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall23" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.92809, 0, 1.48619e-07, 0, 1.7, 0, -1.98692e-07, 0, -2.00391, 15.9311, 13, -14.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="Wall24" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.88899, 0, 1.48619e-07, 0, 1.7, 0, -1.94663e-07, 0, -2.00391, 27.2082, 13, -14.2176)
+material_override = SubResource("StandardMaterial3D_hxnef")
+mesh = ExtResource("5_t08ty")
+skeleton = NodePath("../HalfWall")
+
+[node name="HalfWall11" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-8.45678e-08, 0, 2.41976, 0, 1.7, 0, -1.93469, 0, -1.05771e-07, 36.3536, 13.0855, -14.1708)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall7" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, 40.056, 13.0855, -36.8106)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall8" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.92873, 0, -2.16401e-07, 0, 1.69477, 0, 1.68615e-07, 0, -2.47534, 40.056, 13.0855, -29.5958)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall9" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, 40.056, 13.0855, -22.4362)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall10" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, 40.056, 13.0855, -15.2213)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall12" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, -11.944, 13.0855, -36.8106)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall13" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, -11.944, 13.0855, -29.5958)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall14" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, -11.944, 13.0855, -22.4362)
+material_override = SubResource("StandardMaterial3D_uj4ru")
+mesh = ExtResource("4_s7rsw")
+skeleton = NodePath("../../..")
+
+[node name="HalfWall15" type="MeshInstance3D" parent="Node3D/Walls"]
+transform = Transform3D(-1.93469, 0, -2.11542e-07, 0, 1.7, 0, 1.69136e-07, 0, -2.41976, -11.944, 13.0855, -15.2213)
 material_override = SubResource("StandardMaterial3D_uj4ru")
 mesh = ExtResource("4_s7rsw")
 skeleton = NodePath("../../..")

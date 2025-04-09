@@ -23,7 +23,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "CharlieBones": "res://DLGCCharacterEvents/CharlieBones/CharlieBones.dch",
-"Claudma": "res://Assets/Characters/Cluadma/Claudma.dch"
+"Claudma": "res://Assets/Characters/Cluadma/Claudma.dch",
+"Virtue": "res://DLGCCharacterEvents/Virtue/Virtue.dch"
 }
 directories/dtl_directory={
 "CharlieBones/CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",

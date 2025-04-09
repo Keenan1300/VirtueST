@@ -1,10 +1,38 @@
 [signal arg="CONVOSTART"]
 Claudma: Hello, Virtue.
 - who are you?
+	Claudma: We are Claudma
+	Claudma: With us begins motion
+	Claudma: With us ends spirit
+	Claudma: ..and by us it repeats
+	Claudma: laudma oft renklien. Its is but you
+	Claudma: ...
+	Virtue: (I think they want me to speak)
+	- The contract
+		Virtue: Im here to discuss our contract...
+		Virtue: You want me to be the defence attorney of humanity?
+		Claudma: As it is in your presence here, yes.
+		Virtue: ...
+		Virtue: Seems tough.
+		Virtue: But I've definetly took harder cases.
 	set {ClaudmaInteract} = false
 	[signal arg="CONVOISOVER"]
 	[end_timeline]
-- Your my client, right?
+- Are you my client?
+	Claudma: Careful with whom you speak, Virtue
+	Claudma: We are Claudma
+	Claudma: With us begins motion
+	Claudma: With us ends spirit
+	Claudma: ..and with us it repeats
+	Claudma: ...
+	Virtue: (I think they want me to speak)
 	set {ClaudmaInteract} = false
+	- The contract
+		Virtue: Im here to discuss our contract...
+		Virtue: You want me to be the defence attorney of humanity?
+		Claudma: As it is in your presence here, yes.
+		Virtue: ...
+		Virtue: Seems tough.
+		Virtue: But I've definetly took harder cases.
 	[signal arg="CONVOISOVER"]
 	[end_timeline]
