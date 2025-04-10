@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://coo6rpvuhqyqp"]
+
+[ext_resource type="Script" uid="uid://0v0j50mdpcjm" path="res://Scenes/intro_scene.gd" id="1_qef2n"]
+[ext_resource type="Texture2D" uid="uid://cy0dlbhr4j0uv" path="res://Assets/TheRetainer.png" id="1_y0wha"]
+[ext_resource type="Texture2D" uid="uid://pvetj5v32tl3" path="res://Assets/Letter.png" id="3_d4qc4"]
+[ext_resource type="Texture2D" uid="uid://bfn0kmja6ofsa" path="res://Assets/letter2.png" id="4_pseuf"]
+[ext_resource type="Texture2D" uid="uid://dglcihaneqlye" path="res://Assets/VsContractSigned.png" id="5_h8frj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qef2n"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_d4qc4"]
+mesh = SubResource("PlaneMesh_qef2n")
+
+[sub_resource type="QuadMesh" id="QuadMesh_pseuf"]
+
+[sub_resource type="Gradient" id="Gradient_h8frj"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2liv2"]
+gradient = SubResource("Gradient_h8frj")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ge4sb"]
+diffuse_texture = SubResource("GradientTexture1D_2liv2")
+specular_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qef2n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.04, 16.08)
+texture = SubResource("MeshTexture_d4qc4")
+
+[node name="TheRetainer" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(587, 297)
+scale = Vector2(0.400001, 0.4)
+texture = ExtResource("1_y0wha")
+
+[node name="TheLetter" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(587, 297)
+scale = Vector2(0.400001, 0.4)
+texture = ExtResource("3_d4qc4")
+
+[node name="TheLetter2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(587, 297)
+scale = Vector2(0.505187, 0.505186)
+texture = ExtResource("4_pseuf")
+
+[node name="TheLetter3" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(587, 297)
+scale = Vector2(0.505187, 0.505186)
+texture = ExtResource("5_h8frj")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(576, 320)
+rotation = -1.5708
+scale = Vector2(723.027, -1284.75)
+mesh = SubResource("QuadMesh_pseuf")
+texture = SubResource("CanvasTexture_ge4sb")

@@ -1,0 +1,31 @@
+set {Page1} = true
+set {letter} = false
+And with that completes my 500th attorney contract milestone.
+And..
+I dont know how I should feel.
+Any typical defence attorney of my status would be celebrating right about now
+Maybe open up a bottle of champagne.. throw a party... something..
+It must be the awards.. achievements never feel the same after a while..
+Regardless,
+Here's to Virtue StillBorne
+Virtue: New Yorks finest defence attorney
+Virtue: Im sure my sister would've been proud of me.
+Virtue: Miss you Penelope.
+Virtue: ...
+Virtue: Whats this?
+set {Page1} = false
+set {letter} = true
+...
+Thats odd. They stopped making this brand of letter stamps years ago.
+audio "res://Audio/SoundEffects/Foley Paper Rustle Short 01.wav"
+set {letter2} = true
+Virtue: Cant say I've ever seen a contract quite this 'creative' before. Either this client has an odd sense of humor, or they're just a lunatic.
+"Dear Virtue StillBorne, heed this message as if it were your last. For you are called to serve as the defence attorney of Humanity, and prove why your species deserves its breath."
+"we are enlisting your services, not as the accused, but as the prosecutor. We grant you this opportunity to save humanity. That is, if you can provide adequet reasoning for its defence."
+Virtue: ...
+Virtue: yea I've taken on harder cases.
+audio "res://Audio/SoundEffects/Foley Wood Box Closing Box 02.wav"
+set {letter3} = true
+Virtue: Never turned down a client, sure as hell not gonna start now.
+Virtue: 1324 Constant Avenue.. I'll discuss this futher once I meet with my client.
+set {HouseTr} = true

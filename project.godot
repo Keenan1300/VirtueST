@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VirtueSt"
-run/main_scene="res://Scenes/Mainscene.tscn"
+run/main_scene="uid://coo6rpvuhqyqp"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -31,12 +31,20 @@ directories/dtl_directory={
 "CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
 "Cluadmatimeline": "res://DLGCCharacterEvents/Cluadma/Cluadmatimeline.dtl",
 "INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl",
+"IntroTimeline": "res://DLGCCharacterEvents/IntroTimeline.dtl",
 "timeline": "res://DLGCCharacterEvents/CharlieBones/timeline.dtl"
 }
 variables={
+"ChToCla": false,
 "Charlie1Interact": false,
+"ClaudEnlighten": false,
 "ClaudmaInteract": false,
-"ZIHPILIXBOOL": false
+"HouseTr": false,
+"Page1": true,
+"ZIHPILIXBOOL": false,
+"letter": false,
+"letter2": false,
+"letter3": false
 }
 layout/style_list=["res://DLGCCharacterEvents/DefaultCryptic.tres"]
 layout/default_style="res://DLGCCharacterEvents/DefaultCryptic.tres"

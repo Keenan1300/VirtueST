@@ -1,49 +1,51 @@
 [signal arg="CONVOSTART"]
+set {ClaudEnlighten} = false
 Claudma: Hello, Virtue.
-- Who are you?
-	Claudma: We are Claudma
-	Claudma: With us begins motion
-	Claudma: With us ends spirit
-	Claudma: ..and by us it repeats
-	Claudma: laudma oft renklien. Its is but you
-	Claudma: ...
-	Virtue: (I think they want me to speak)
-	- The contract
-		Virtue: Im here to discuss our contract...
-		Virtue: You want me to be the defence attorney of humanity?
-		Claudma: As it is in your presence here, yes.
-		Virtue: ...
-		Virtue: I've took on harder cases.
-		Virtue: Although I cant say this isnt a bit unorthodox.
-		Virtue: If'n any other case I spoke to the jury before a trial I'd be disbarred immediatley. Odd rules you people play by.
-		label DialogueBody
-		- What are your thoughts on humanity?
-			Virtue: As stated in the contract, the defendant is accused of various, as it was put, "profane crimes against existence"
-			Virtue:  before moving to court with this, do you have any comments related to these allegations?
-			Claudma: For what little time man has walked they have stepped upon the worlds of many
-			Claudma: With each footprint, worlds destroyed. Cries of a thousand lives. Thousands of civilizations extinguished like that of a candle.
-			Claudma: Of all humans that walk none speak of the sanctity of ground. Not dirt, but ground. The spirits that lie beneath the quilts of fabric upon which existence predicates itself
-			Claudma: I do not desire to make humanity one of these extinguished lives. However, you must first understand what it means to walk on ground before you can convince the other timeless ones.
-			Virtue: ... 
-			Virtue: Ok
-			Virtue: Well... thanks for that I guess... I'll keep that in mind in the courts.
-			jump DialogueBody
-		- Im the best there is
-			Virtue: As far as criminal defence attorneys go, I can assure you. You've hired the best. 
-			Claudma: May that be known in due time.
-			Claudma: But let not this heir of hubris possess you. For you walk among endless ones.
-			jump DialogueBody
-			[end_timeline]
-		- (Exit Conversation)
-			set {ClaudmaInteract} = false
-			[signal arg="CONVOISOVER"]
-			[end_timeline]
 - Are you my client?
 	Claudma: Careful with whom you speak, Virtue
 	Claudma: We are Claudma
 	Claudma: With us begins motion
 	Claudma: With us ends spirit
-	Claudma: ..and with us it repeats
-	Claudma: ...
+	Claudma: ..and by us it repeats
 	Virtue: (I think they want me to speak)
-	jump DialogueBody
+	- The contract
+		Virtue: Im here to discuss our contract...
+		Virtue: You want me to be the defence attorney of humanity?
+		Claudma: As it is in your presence here, yes.
+		Claudma: It was of our will that we summoned your services.
+		Claudma: However, it is really you that is accused.
+		Virtue: how so?
+		Claudma: It is you who will convince us, the council, why humanity should exist.
+		Virtue: ...
+		Virtue: I've took on harder cases.
+		Virtue: Although I cant say this isnt a bit unorthodox.
+		Virtue: If'n any other case I spoke to the prosecutor before a trial I'd be disbarred immediatley. Odd rules you people play by.
+		if {ChToCla} == true:
+			- [Lovley mist]
+				Virtue: The man out front... uh, the one with antlers? he wants you to know the mist is lovley outside.
+				Claudma: You've spoken with the man of bones?
+				Claudma: That is a troubled one. For this remark we shall enlighten you.
+				Claudma: Authority and chaos are bound by dreams.
+				Claudma: Without dreams, spirits will have no hold, no handle in the world. So to understand what it means to walk on ground, you must understand this basic truth.
+				Claudma: Your mortality is not linear. when truths lie behind your eyes, do not claim to know it.
+				set {ClaudEnlighten} = true
+				jump DialogueBody
+		else:
+			label DialogueBody
+			- What are your thoughts on humanity?
+				Virtue: As stated in the contract, the defendant is accused of various, as it was put, "profane crimes against existence"
+				Virtue: before moving to court with this, do you have any comments related to these allegations?
+				Claudma: For what little time man has walked, they have stepped upon the worlds of many
+				Claudma: With each footprint, worlds destroyed. Cries of a thousand lives. Thousands of civilizations extinguished like that of a candle.
+				Claudma: Of all humans that walk none speak of the sanctity of ground. Not dirt, but ground. The spirits that lie beneath the quilts of fabric upon which existence predicates itself
+				Claudma: I do not desire to make humanity one of these extinguished lives. However, you must first understand what it means to walk on ground before you can convince the other timeless ones.
+				jump DialogueBody
+			- Im the best there is
+				Virtue: As far as criminal defence attorneys go, I can assure you. You've hired the best.
+				Claudma: May that be known in due time.
+				Claudma: But let not this heir of hubris possess you. For you walk among endless ones.
+				jump DialogueBody
+			- (Exit Conversation)
+				set {ClaudmaInteract} = false
+				[signal arg="CONVOISOVER"]
+				[end_timeline]

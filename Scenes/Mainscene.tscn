@@ -1517,7 +1517,7 @@ material_override = SubResource("StandardMaterial3D_scnd2")
 mesh = ExtResource("4_xjh0k")
 
 [node name="playerV" parent="." groups=["CameraController"] instance=ExtResource("8_dvajx")]
-transform = Transform3D(1.07525, 0, 1.88002e-07, 0, 1.07525, 0, -1.88002e-07, 0, 1.07525, -22.9791, 0.469826, -13.6223)
+transform = Transform3D(1.07525, 0, 1.88002e-07, 0, 1.07525, 0, -1.88002e-07, 0, 1.07525, -22.9791, 0.469826, -52.7183)
 
 [node name="House" type="MeshInstance3D" parent="."]
 transform = Transform3D(-26.5466, 0, 2.32077e-06, 0, 26.5466, 0, -2.32077e-06, 0, -26.5466, -35.7109, -49.5279, 2.17718)
@@ -1786,12 +1786,6 @@ material_override = SubResource("StandardMaterial3D_fbqn1")
 mesh = SubResource("ArrayMesh_bvd82")
 skin = SubResource("Skin_gikn7")
 
-[node name="Model_020" type="MeshInstance3D" parent="hands/cluster/HandGarden3/Armature_007/Skeleton3D"]
-transform = Transform3D(0.829311, 0, 2.98023e-08, 0, 0.829311, 0, -2.98023e-08, 0, 0.829311, -17.8808, 0, -6.64713)
-material_override = SubResource("StandardMaterial3D_fbqn1")
-mesh = SubResource("ArrayMesh_bvd82")
-skin = SubResource("Skin_gikn7")
-
 [node name="Model_021" type="MeshInstance3D" parent="hands/cluster/HandGarden3/Armature_007/Skeleton3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3047, 0, -2.82633)
 material_override = SubResource("StandardMaterial3D_fbqn1")
@@ -1800,12 +1794,6 @@ skin = SubResource("Skin_gikn7")
 
 [node name="Model_022" type="MeshInstance3D" parent="hands/cluster/HandGarden3/Armature_007/Skeleton3D"]
 transform = Transform3D(0.712143, 0, 5.96046e-08, 0, 0.712143, 0, -5.96046e-08, 0, 0.712143, -12.981, 0, -8.55879)
-material_override = SubResource("StandardMaterial3D_fbqn1")
-mesh = SubResource("ArrayMesh_bvd82")
-skin = SubResource("Skin_gikn7")
-
-[node name="Model_023" type="MeshInstance3D" parent="hands/cluster/HandGarden3/Armature_007/Skeleton3D"]
-transform = Transform3D(0.75795, 0, 2.98023e-08, 0, 0.75795, 0, -2.98023e-08, 0, 0.75795, -17.4964, 0, -10.2374)
 material_override = SubResource("StandardMaterial3D_fbqn1")
 mesh = SubResource("ArrayMesh_bvd82")
 skin = SubResource("Skin_gikn7")
@@ -2730,12 +2718,6 @@ skin = SubResource("Skin_gikn7")
 
 [node name="Model_017" type="MeshInstance3D" parent="hands/cluster/HandGarden7/Armature_007/Skeleton3D"]
 transform = Transform3D(-0.838271, 0, -0.545254, 0, 1, 0, 0.545254, 0, -0.838271, -84.1282, 0, -51.3697)
-material_override = SubResource("StandardMaterial3D_tc8mv")
-mesh = SubResource("ArrayMesh_bvd82")
-skin = SubResource("Skin_gikn7")
-
-[node name="Model_018" type="MeshInstance3D" parent="hands/cluster/HandGarden7/Armature_007/Skeleton3D"]
-transform = Transform3D(-0.838271, 0, -0.545254, 0, 1, 0, 0.545254, 0, -0.838271, -86.2895, 0, -57.1789)
 material_override = SubResource("StandardMaterial3D_tc8mv")
 mesh = SubResource("ArrayMesh_bvd82")
 skin = SubResource("Skin_gikn7")
@@ -8090,18 +8072,6 @@ skeleton = NodePath("../../../../../../..")
 
 [node name="GrassHeavy7" type="MeshInstance3D" parent="Deco/Grass/Cluster/Cluster9/Cluster6/Cluster4"]
 transform = Transform3D(1.3113e-07, 0, 0.8, 0, 0.913795, 0, -0.8, 0, 1.3113e-07, -17.8973, 0.245614, 3.64618)
-material_override = SubResource("StandardMaterial3D_e41dg")
-mesh = ExtResource("19_5nw24")
-skeleton = NodePath("../../../../../../..")
-
-[node name="GrassHeavy8" type="MeshInstance3D" parent="Deco/Grass/Cluster/Cluster9/Cluster6/Cluster4"]
-transform = Transform3D(-0.772741, 0, -0.207055, 0, 0.913795, 0, 0.207055, 0, -0.772741, -15.5681, 0.245614, 4.9356)
-material_override = SubResource("StandardMaterial3D_e41dg")
-mesh = ExtResource("19_5nw24")
-skeleton = NodePath("../../../../../../..")
-
-[node name="GrassHeavy9" type="MeshInstance3D" parent="Deco/Grass/Cluster/Cluster9/Cluster6/Cluster4"]
-transform = Transform3D(-0.565686, 0, -0.565685, 0, 0.913795, 0, 0.565685, 0, -0.565686, -17.5707, 0.245614, 4.90151)
 material_override = SubResource("StandardMaterial3D_e41dg")
 mesh = ExtResource("19_5nw24")
 skeleton = NodePath("../../../../../../..")

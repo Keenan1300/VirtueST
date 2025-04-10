@@ -18,7 +18,7 @@ func _process(delta):
 		pass
 
 func interact():
-	Dialogic.start("timeline")
+	Dialogic.start("CharlieBones1")
 	cinematicbars.show();
 	$Charlie1Camera.current = true
 	Dialogic.VAR.Charlie1Interact = true
