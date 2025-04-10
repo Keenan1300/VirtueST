@@ -5,7 +5,7 @@ extends Node3D
 func _ready():
 	$AudioStreamPlayer.play()
 	
-	#Dialogic.start("")
+	
 	
 	
 	pass # Replace with function body.
