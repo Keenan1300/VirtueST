@@ -21,7 +21,7 @@ audio "res://Audio/SoundEffects/Foley Paper Rustle Short 01.wav"
 set {letter2} = true
 Virtue: Cant say I've ever seen a contract quite this 'creative' before. Either this client has an odd sense of humor, or they're just a lunatic.
 "Dear Virtue StillBorne, heed this message as if it were your last. For you are called to serve as the defence attorney of Humanity, and prove why your species deserves its breath."
-"we are enlisting your services, not as the accused, but as the prosecutor. We grant you this opportunity to save humanity. That is, if you can provide adequet reasoning for its defence."
+"we are enlisting your services, not as the accused, but as the prosecutor. We grant you this opportunity to save humanity. That is, if you can provide adequate reasoning for its defence."
 Virtue: ...
 Virtue: yea I've taken on harder cases.
 audio "res://Audio/SoundEffects/Foley Wood Box Closing Box 02.wav"
