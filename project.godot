@@ -24,24 +24,31 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "CharlieBones": "res://DLGCCharacterEvents/CharlieBones/CharlieBones.dch",
 "Claudma": "res://Assets/Characters/Cluadma/Claudma.dch",
-"Virtue": "res://DLGCCharacterEvents/Virtue/Virtue.dch"
+"Virtue": "res://DLGCCharacterEvents/Virtue/Virtue.dch",
+"Ziphilix": "res://DLGCCharacterEvents/Ziphilix.dch"
 }
 directories/dtl_directory={
-"CharlieBones/CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",
-"CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
+"CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",
 "Cluadmatimeline": "res://DLGCCharacterEvents/Cluadma/Cluadmatimeline.dtl",
+"DLGCSceneEvents/CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
 "INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl",
 "IntroTimeline": "res://DLGCCharacterEvents/IntroTimeline.dtl",
+"Ziphilixtimeline": "res://DLGCCharacterEvents/Ziphilixtimeline.dtl",
 "timeline": "res://DLGCCharacterEvents/CharlieBones/timeline.dtl"
 }
 variables={
+"BonestoZIPH": false,
 "ChToCla": false,
 "Charlie1Interact": false,
 "ClaudEnlighten": false,
+"ClaudTalkedTo": false,
 "ClaudmaInteract": false,
 "HouseTr": false,
 "Page1": true,
+"Warnings": 0.0,
 "ZIHPILIXBOOL": false,
+"ZiphEnlighten": false,
+"ZiphInteract": false,
 "letter": false,
 "letter2": false,
 "letter3": false

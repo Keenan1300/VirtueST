@@ -1,14 +1,29 @@
 [signal arg="CONVOSTART"]
 CharlieBones: Good nevermourne, Virtue
 CharlieBones: right now you're looking for your clients. They should be waiting for you somewhere around by the hallway.
-CharlieBones: And if you could do me a favor? tell Claudma about the lovley mist outside...
-CharlieBones: very lovley...
-- Who are you?
-	CharlieBones: ...
-	[signal arg="CONVOISOVER"]
-	set {Charlie1Interact} = false
-	[end_timeline]
-- why are you here?
-	[signal arg="CONVOISOVER"]
-	set {Charlie1Interact} = false
-	[end_timeline]
+if {ClaudTalkedTo} == true:
+	CharlieBones: Thanks for telling Claudma about the mist, hehe
+	Virtue: How could you know that?
+	CharlieBones: I just do.
+	CharlieBones: now I like you, so I gotta give you a heads up.
+	CharlieBones: the next "Clients" gonna be tough to talk to...
+	CharlieBones: Tell them about the "Solar Marker" and they'll understand what you say
+	Virtue: Is that his favourite movie or something?
+	CharlieBones: No, but trust me on this. They''ll get it.
+	set {BonestoZIPH} = true
+	jump CharlieConvo
+else:
+	label CharlieConvo
+	- Who are you?
+		CharlieBones: ...
+		jump CharlieConvo
+	- why are you here?
+		CharlieBones: ...
+		jump CharlieConvo
+	- (Leave Conversation)
+		CharlieBones: If you could do me a favor? tell Claudma about the lovley mist outside...
+		CharlieBones: very lovley...
+		(I have no clue who Claudma is, but this odd fellow seems to look fondly upon them)
+		[signal arg="CONVOISOVER"]
+		set {Charlie1Interact} = false
+		[end_timeline]

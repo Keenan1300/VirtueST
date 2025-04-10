@@ -1,6 +1,5 @@
 [signal arg="CONVOSTART"]
 set {ClaudEnlighten} = false
-set {ClaudTalkedTo} = false
 Claudma: Hello, Virtue.
 - Are you my client?
 	Claudma: Careful with whom you speak, Virtue
@@ -48,6 +47,5 @@ Claudma: Hello, Virtue.
 				jump DialogueBody
 			- (Exit Conversation)
 				set {ClaudmaInteract} = false
-				set {ClaudTalkedTo} = true
 				[signal arg="CONVOISOVER"]
 				[end_timeline]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://ba033ajbcsdci"]
+[gd_scene load_steps=22 format=3 uid="uid://ba033ajbcsdci"]
 
+[ext_resource type="Script" uid="uid://b862dhch46jtj" path="res://Scenes/ziphili_xworld.gd" id="1_8bp4o"]
 [ext_resource type="PackedScene" uid="uid://cjdtvppm8xdhv" path="res://Scenes/ZIPHILIX.tscn" id="1_qnpwg"]
 [ext_resource type="PackedScene" uid="uid://1caqd5o21n0y" path="res://Scenes/player_v.tscn" id="2_3vjau"]
+[ext_resource type="AudioStream" uid="uid://bl2rgf3xq1tbt" path="res://Audio/SoundEffects/Songs/InbetweenFinal.mp3" id="2_8bp4o"]
 [ext_resource type="Script" uid="uid://5o2hhfm88w63" path="res://Scenes/ziphilix.gd" id="2_tfu8q"]
 [ext_resource type="Script" uid="uid://d08qnqtkdkow5" path="res://Scenes/portalback.gd" id="3_20hjk"]
-[ext_resource type="Script" uid="uid://df6x4utwllrrl" path="res://Scenes/Portal1.gd" id="4_tfu8q"]
+[ext_resource type="Script" uid="uid://msbwnvmn0oia" path="res://Scenes/ziph_interaction.gd" id="4_50ees"]
+[ext_resource type="Script" uid="uid://kkfclb18d72k" path="res://Scenes/InteractEPopup.gd" id="7_8bp4o"]
+[ext_resource type="PackedScene" uid="uid://digyc81wilcv4" path="res://Scenes/DialogueBars.tscn" id="8_e4faq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_didof"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -23,7 +27,7 @@ sky_material = SubResource("ProceduralSkyMaterial_didof")
 [sub_resource type="Environment" id="Environment_sw0tb"]
 background_mode = 2
 background_color = Color(0.0752288, 0, 0.510415, 1)
-background_energy_multiplier = 0.7
+background_energy_multiplier = 1.88
 sky = SubResource("Sky_fhfep")
 ambient_light_source = 1
 ambient_light_color = Color(0, 0.700224, 0.727906, 1)
@@ -37,7 +41,6 @@ glow_enabled = true
 glow_intensity = 0.16
 glow_strength = 1.44
 glow_bloom = 0.17
-fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0.789494, 0.512396, 5.77569e-07, 1)
 fog_light_energy = 4.82
@@ -55,8 +58,11 @@ volumetric_fog_length = 169.93
 volumetric_fog_detail_spread = 1.7411
 volumetric_fog_sky_affect = 0.56
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_20hjk"]
-albedo_color = Color(1, 0.643137, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bp4o"]
+albedo_color = Color(0.889407, 0.54141, 7.70092e-07, 1)
+emission_enabled = true
+emission = Color(0.784301, 0.371095, 0, 1)
+emission_energy_multiplier = 1.72
 
 [sub_resource type="BoxMesh" id="BoxMesh_tfu8q"]
 
@@ -79,19 +85,24 @@ emission_enabled = true
 emission = Color(1, 0, 0, 1)
 emission_energy_multiplier = 9.65
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_r4n3u"]
+size = Vector3(0.00738525, 1, 0.00544739)
+
 [node name="Node3D2" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.69006, 0)
+script = ExtResource("1_8bp4o")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8bp4o")
+volume_db = 1.0
+parameters/looping = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_sw0tb")
 
-[node name="ZIPHANIM" parent="." instance=ExtResource("1_qnpwg")]
-transform = Transform3D(2.8, 0, 0, 0, 2.8, 0, 0, 0, 2.8, 0, 3.48868, 0)
-script = ExtResource("2_tfu8q")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(161.904, -11.2131, 0, 10.5947, 171.354, 0, 0, 0, -179.84, 10.8075, -97.8972, 0)
-material_override = SubResource("StandardMaterial3D_20hjk")
+material_override = SubResource("StandardMaterial3D_8bp4o")
 mesh = SubResource("BoxMesh_tfu8q")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
@@ -153,30 +164,26 @@ mesh = SubResource("BoxMesh_p1khc")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_50ees")
 
-[node name="Portal2" type="StaticBody3D" parent="Home"]
-transform = Transform3D(-1.21804e-05, 0, 379.309, 0, 786.54, 0, -278.656, 0, -1.65801e-05, 23.8721, 4.6701, -34.1081)
-script = ExtResource("4_tfu8q")
+[node name="ZiphInteraction" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.00013795, 0, -3863.4, 315.198, 5034.45, -1.68664e-05, 3140.14, -505.344, -0.00016803, -6.71948, 2.13447, -10.3759)
+script = ExtResource("4_50ees")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Home/Portal2"]
-transform = Transform3D(1.3744, 0, 7.10543e-15, 0, 0.773118, 0, 3.55271e-15, 0, 0.813054, 0.00023827, 0.00078086, -2.22698e-05)
-shape = SubResource("BoxShape3D_muxfr")
+[node name="ZIPHANIM" parent="ZiphInteraction" instance=ExtResource("1_qnpwg")]
+transform = Transform3D(-3.87817e-11, 8.86115e-05, 0.000882786, -7.10138e-18, 0.00055062, -5.52696e-05, -0.000724749, -3.16403e-12, -3.15215e-11, 0.00331419, 6.14936e-05, -0.00173926)
+script = ExtResource("2_tfu8q")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Home/Portal2"]
-transform = Transform3D(-6.76882e-10, 0, -0.00104583, 0, 0.00852009, 0, 0.0113761, 0, -3.3584e-11, -0.00195184, 0.000323892, 0.000211112)
-mesh = SubResource("BoxMesh_p1khc")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_50ees")
+[node name="1Camera" type="Camera3D" parent="ZiphInteraction"]
+transform = Transform3D(0.000179146, -4.77556e-05, -0.000256962, 1.81953e-06, 0.000194527, -3.48837e-05, 0.000213487, 2.38969e-05, 0.000144395, -0.00920558, -0.00200258, -0.000643977)
+fov = 92.5
+near = 0.194
+far = 3993.2
 
-[node name="Portal2" type="StaticBody3D" parent="Home/Portal2"]
-transform = Transform3D(-1.21804e-05, 0, 379.309, 0, 786.54, 0, -278.656, 0, -1.65801e-05, 23.8721, 4.6701, -34.1081)
-script = ExtResource("4_tfu8q")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ZiphInteraction"]
+transform = Transform3D(-0.0044792, 0.0229564, 2.22311, 9.25723e-05, 1.11074, -0.0459463, -2.7308, -8.19703e-10, -0.00364824, -0.000830416, 0.000709567, -0.00374536)
+shape = SubResource("BoxShape3D_r4n3u")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Home/Portal2/Portal2"]
-transform = Transform3D(1.3744, 0, 7.10543e-15, 0, 0.773118, 0, 3.55271e-15, 0, 0.813054, 0.00023827, 0.00078086, -2.22698e-05)
-shape = SubResource("BoxShape3D_muxfr")
+[node name="CanvasLayer" type="CanvasLayer" parent="ZiphInteraction"]
+visible = false
+script = ExtResource("7_8bp4o")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Home/Portal2/Portal2"]
-transform = Transform3D(-6.76882e-10, 0, -0.00104583, 0, 0.00852009, 0, 0.0113761, 0, -3.3584e-11, -0.00195184, 0.000323892, 0.000211112)
-mesh = SubResource("BoxMesh_p1khc")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_50ees")
+[node name="Control" parent="ZiphInteraction/CanvasLayer" instance=ExtResource("8_e4faq")]

@@ -16,11 +16,11 @@ mesh = SubResource("PlaneMesh_qef2n")
 [sub_resource type="Gradient" id="Gradient_h8frj"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_2liv2"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h8frj"]
 gradient = SubResource("Gradient_h8frj")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ge4sb"]
-diffuse_texture = SubResource("GradientTexture1D_2liv2")
+diffuse_texture = SubResource("GradientTexture1D_h8frj")
 specular_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]

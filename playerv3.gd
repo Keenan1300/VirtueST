@@ -70,7 +70,8 @@ func _unhandled_input(event:InputEvent) -> void:
 
 func _physics_process(delta):
 	
-	
+	if (Dialogic.VAR.Warnings > 2):
+		get_tree().change_scene_to_file("res://Scenes/BadEnding.tscn")
 	
 	
 	if istalking == true:

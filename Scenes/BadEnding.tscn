@@ -1,4 +1,18 @@
-[gd_scene format=3 uid="uid://nrfhs2x5fej3"]
+[gd_scene load_steps=6 format=3 uid="uid://nrfhs2x5fej3"]
+
+[ext_resource type="Script" uid="uid://bxf32ifmlevka" path="res://Scenes/bad_ending.gd" id="1_uiqoi"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_34ntr"]
+
+[sub_resource type="Gradient" id="Gradient_uiqoi"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uiqoi"]
+gradient = SubResource("Gradient_uiqoi")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wpbe2"]
+diffuse_texture = SubResource("GradientTexture1D_uiqoi")
+specular_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +21,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uiqoi")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(576, 320)
+rotation = -1.5708
+scale = Vector2(723.027, -1284.75)
+mesh = SubResource("QuadMesh_34ntr")
+texture = SubResource("CanvasTexture_wpbe2")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 936.0
+offset_bottom = 274.0
+text = "BAD ENDING
+
+You've said the wrong thing too many times, and not you pay the ultimate price."
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 113.0
+offset_right = 46.0
+offset_bottom = 153.0
+scale = Vector2(2.2, 1.92)
+
+[node name="Button" type="Button" parent="MenuBar"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Restart"

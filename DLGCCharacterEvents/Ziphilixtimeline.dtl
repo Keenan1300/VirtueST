@@ -1,0 +1,65 @@
+[signal arg="CONVOSTART"]
+set {ZiphEnlighten} = false
+Ziphilix: BANANAS ARENT REAL YOU INVENTED THEM IN A DREAM
+Ziphilix: WAKE UP
+Ziphilix: THE MOON SCREAMED LAST NIGHT. CORD STRINGS ANSWERED
+Ziphilix: WAKE UP
+- Are you my client?
+	Ziphilix: CLIENT CLIENT YES HAVENT HAVENT BUT I FOUND TEETH IN THE FLOOR YES YES
+	Ziphilix: I WAS ZIPHILIX WHILE I HEAR A KNOCK
+	Ziphilix: I WAS THE PROFANE MAN
+	Ziphilix: I MIGHT BE THE CRYING SON
+	Ziphilix: I WILL BE THE ENTROPY YES YES GOOD
+	Virtue: (I think they want me to speak)
+	- The contract
+		Virtue: Im here to discuss our contract...
+		Virtue: You want me to be the defence attorney of humanity?
+		Ziphilix: PARDON WELL YES YES IVE EXCUSED FOUND DOOR IN THE MELTING SUN
+		(I think I'll take that as a yes?)
+		Ziphilix: IVE ONLY STOPPED BY TO DROP OFF THE CRATES I DONT MEAN TO STAY LONG
+		(I need to find a way of communicating with them... Maybe I shouldnt use too many words..)
+		Ziphilix: I SHORTENED WORDS TO SAVE TIME, I ONLY WANT ICE
+		if {BonestoZIPH} == true:
+			Virtue: You know something about a Solar Marker?
+			Ziphilix: ...
+			Ziphilix: YOUVE SPOKEN TO THE ONE OF MANY BONES
+			Ziphilix: I SHALL ENLIGHTEN YOU
+			Ziphilix: SPIRITS SPEAK IN NO TONGUES WITHOUT THE OSCILATING TONES IN THEIR STRINGS
+			Ziphilix: ALAS THE PEACEFUL IS THE MOST CHAOTIC
+			set {ZiphEnlighten} = true
+			jump DialogueSection
+		else:
+			label DialogueSection
+			- Humanity? Thoughts?
+				Ziphilix: MY EGO ITS DESTRUCTION AND THE ELEGANT RECYCLING THATS TO COME
+				Ziphilix: HUMANITY IS WHOLE IN NEEDS WHOLE IN NEEDS
+				Ziphilix: FEED
+				(I should carefully examine what they've said.. If I get this wrong I might offend them)
+				- So Good?
+					Ziphilix: FEED FEED FEED FEED
+					Ziphilix: YOUR IS CONQUERED OVEN MITTS
+					(It seems what I just said offended them.)
+					set {Warnings} += 1.0
+					jump DialogueSection
+				- So Bad?
+					Ziphilix: AND THE WINNER HAS HIS TROPHY!
+					Ziphilix: NEXT GOLFER UP MUST DEFEND HIMSELF FROM WINDS
+					jump DialogueSection
+			- Convince?
+				Ziphilix: NO NO NO PLEASE DONT HURT ME
+				Ziphilix: THERE IS TOO LEARN ALL FOUND IN YOU
+				(Trying to convince this thing is like trying to understand someone speaking a language you've never heard in morse code)
+				(I should look for emotionally charged words)
+				Virtue: In my role as defence attorney I need to understand your rationale behind the allegations listed in the contract.
+				Virtue: Can you articulate the basis of these allegations?
+				Ziphilix: ...
+				Ziphilix: THIS YES TRIAL IS MY IDEA
+				Ziphilix: HUMANITY YES TAKES TOO MUCH ROOM. TOO MUCH SPACE
+				Ziphilix: FUN TO REMOVE
+				(Think thats about as much as I can get from this topic of conversation)
+				jump DialogueSection
+			- (Leave Conversation)
+				(Ive had more productive conversations with a wall, but still, atleast I know the likley culprit for why im here)
+				Virtue: Good talk.
+				[signal arg="CONVOISOVER"]
+				[end_timeline]
