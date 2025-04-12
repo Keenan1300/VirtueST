@@ -28,15 +28,18 @@ directories/dch_directory={
 "Ziphilix": "res://DLGCCharacterEvents/Ziphilix.dch"
 }
 directories/dtl_directory={
-"CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",
+"CharlieBones/CharlieBones1": "res://DLGCCharacterEvents/CharlieBones/CharlieBones1.dtl",
 "Cluadmatimeline": "res://DLGCCharacterEvents/Cluadma/Cluadmatimeline.dtl",
-"DLGCSceneEvents/CharlieBones1": "res://DLGCSceneEvents/CharlieBones1.dtl",
 "INTHOUSE1": "res://DLGCSceneEvents/INTHOUSE1.dtl",
+"IntroIntoHouseINT": "res://DLGCSceneEvents/IntroIntoHouseINT.dtl",
 "IntroTimeline": "res://DLGCCharacterEvents/IntroTimeline.dtl",
+"ScenebeforeClaud": "res://DLGCSceneEvents/ScenebeforeClaud.dtl",
+"THISISLOCKED": "res://DLGCSceneEvents/THISISLOCKED.dtl",
 "Ziphilixtimeline": "res://DLGCCharacterEvents/Ziphilixtimeline.dtl",
 "timeline": "res://DLGCCharacterEvents/CharlieBones/timeline.dtl"
 }
 variables={
+"BarrierDownCL": false,
 "BonestoZIPH": false,
 "ChToCla": false,
 "Charlie1Interact": false,
