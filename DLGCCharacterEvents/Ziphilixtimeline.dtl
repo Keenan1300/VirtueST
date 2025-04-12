@@ -61,5 +61,6 @@ Ziphilix: WAKE UP
 			- (Leave Conversation)
 				(Ive had more productive conversations with a wall, but still, atleast I know the likley culprit for why im here)
 				Virtue: Good talk.
+				set {ZiphInteract} = false
 				[signal arg="CONVOISOVER"]
 				[end_timeline]

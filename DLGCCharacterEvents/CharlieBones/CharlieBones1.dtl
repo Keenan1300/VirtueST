@@ -15,15 +15,22 @@ if {ClaudTalkedTo} == true:
 else:
 	label CharlieConvo
 	- Who are you?
+		CharlieBones: Just some bones.
 		CharlieBones: ...
 		jump CharlieConvo
 	- why are you here?
-		CharlieBones: ...
+		CharlieBones: 'fraid not.
 		jump CharlieConvo
 	- (Leave Conversation)
-		CharlieBones: If you could do me a favor? tell Claudma about the lovley mist outside...
-		CharlieBones: very lovley...
-		(I have no clue who Claudma is, but this odd fellow seems to look fondly upon them)
+		if {ClaudTalkedTo} == false:
+			CharlieBones: If you could do me a favor? tell Claudma about the lovley mist outside...
+			CharlieBones: very lovley...
+			(I have no clue who Claudma is, but this odd fellow seems to look fondly upon them)
+			[signal arg="CONVOISOVER"]
+			set {Charlie1Interact} = false
+			set {ChToCla} = true
+			[end_timeline]
+		CharlieBones: Good talk
 		[signal arg="CONVOISOVER"]
 		set {Charlie1Interact} = false
 		[end_timeline]

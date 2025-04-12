@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bycpvwm4ypfv3"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_epmsc"]
+
+[sub_resource type="Gradient" id="Gradient_cvmtr"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_h8frj"]
+gradient = SubResource("Gradient_cvmtr")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0y2k3"]
+diffuse_texture = SubResource("GradientTexture1D_h8frj")
+specular_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(576, 320)
+rotation = -1.5708
+scale = Vector2(723.027, -1284.75)
+mesh = SubResource("QuadMesh_epmsc")
+texture = SubResource("CanvasTexture_0y2k3")

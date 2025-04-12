@@ -1,0 +1,33 @@
+set {BarrierDownCL} = false
+audio "res://Audio/SoundEffects/Foley Toy Slam Closed Door 01.wav"
+...
+Virtue: Why is it so dark in here?
+Using what little light I can get from the door behind me, I walk further into the room, hoping something, anything will bring off its own light.
+As I walk into the room, the door closes behind me, and im bombarded with an overwhelming feeling that compels me to close my eyes
+With all the strength in my being I try to keep my composure, and pry my eyes open against this force
+What should I do?
+- Submit to it
+	Whatever this is, there's no use in fighting it.
+	As I shut my eyelids I see a blue light in the distance
+	Somehow even brighter now that my eyes are closed. It shines straight through to me.
+	A weight of complex emotions wash over me spontaneously
+	Im angry
+	Im sad
+	Im lost
+	Im afraid
+	All in one second I feel a lifetimes worth of emotions and ideas.
+	I understand
+	I need to calm myself, and see through these emotions
+	But not to discard them, but use them like paint strokes in seeing my surroundings
+	I am the canvas.
+	set {BarrierDownCL} = true
+- Keep fighting
+	Against what feels like thousands of small hands clasping the musles of my face I push to pry my eyes open
+	For what little glimpses of success I have, I stare through my eyelashes, and I see something. A blurry glimpse of blue light.
+	wait, no.
+	I dont see this light when I  pry my eyes
+	I see them while theyre closed!
+	As I aimlessly move towards this light its force strengthens, and I find myself in a losing battle
+	My body feels atrophied
+	Claudma: Wake up.
+	set {BarrierDownCL} = true

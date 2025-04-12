@@ -5,7 +5,7 @@ extends Node3D
 func _ready():
 	$AudioStreamPlayer.play()
 	$AudioStreamPlayer2.play()
-	
+	Dialogic.start("IntroIntoHouseINT")
 	#Dialogic.start("")
 	
 	
