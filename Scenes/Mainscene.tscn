@@ -1517,7 +1517,7 @@ material_override = SubResource("StandardMaterial3D_scnd2")
 mesh = ExtResource("4_xjh0k")
 
 [node name="playerV" parent="." groups=["CameraController"] instance=ExtResource("8_dvajx")]
-transform = Transform3D(1.07525, 0, 1.88002e-07, 0, 1.07525, 0, -1.88002e-07, 0, 1.07525, -22.9791, 0.469826, -52.7183)
+transform = Transform3D(0.911551, 0, 1.5938e-07, 0, 0.911551, 0, -1.5938e-07, 0, 0.911551, -22.9791, 0.469826, -52.7183)
 
 [node name="House" type="MeshInstance3D" parent="."]
 transform = Transform3D(-26.5466, 0, 2.32077e-06, 0, 26.5466, 0, -2.32077e-06, 0, -26.5466, -35.7109, -49.5279, 2.17718)

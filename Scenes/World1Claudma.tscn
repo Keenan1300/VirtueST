@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://bvs5jv6c05ixg" path="res://Assets/Characters/Cluadma/anim_claud.gd" id="18_1d6q1"]
 [ext_resource type="Script" uid="uid://d08qnqtkdkow5" path="res://Scenes/portalback.gd" id="21_si6sj"]
 [ext_resource type="Script" uid="uid://df6x4utwllrrl" path="res://Scenes/Portal1.gd" id="21_vvwdy"]
-[ext_resource type="PackedScene" uid="uid://bycpvwm4ypfv3" path="res://Scenes/Darkscreen.tscn" id="23_qw4l7"]
+[ext_resource type="PackedScene" path="res://Scenes/Darkscreen.tscn" id="23_qw4l7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_si6sj"]
 sky_top_color = Color(0.982878, 0.000637829, 0.95525, 1)

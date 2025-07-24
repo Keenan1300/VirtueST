@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://nrfhs2x5fej3"]
 
-[ext_resource type="Script" uid="uid://bxf32ifmlevka" path="res://Scenes/bad_ending.gd" id="1_uiqoi"]
+[ext_resource type="Script" path="res://Scenes/bad_ending.gd" id="1_uiqoi"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_34ntr"]
 
