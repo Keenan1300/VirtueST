@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2mialomc364g"]
 
-[ext_resource type="Script" uid="uid://dcgg2moa7fhky" path="res://Scenes/odd_ending.gd" id="1_hktgh"]
+[ext_resource type="Script" path="res://Scenes/odd_ending.gd" id="1_hktgh"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_go884"]
 
@@ -31,6 +31,7 @@ mesh = SubResource("QuadMesh_go884")
 texture = SubResource("CanvasTexture_yvs0q")
 
 [node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
 offset_right = 936.0
 offset_bottom = 274.0
 scale = Vector2(1, 0.99789)
@@ -39,6 +40,7 @@ text = "ODD ENDING
 You came into the court room without colleting all the necessary evidence. You failed to convince anyone."
 
 [node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 113.0
 offset_right = 46.0

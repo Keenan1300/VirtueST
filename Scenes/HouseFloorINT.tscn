@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c5si7dxuo804b" path="res://Assets/Architecture/Appliances/ApplianceTrimSheet.png" id="14_w3ciq"]
 [ext_resource type="Script" uid="uid://k7mf5n0t8abs" path="res://Scenes/zport.gd" id="15_n64gp"]
 [ext_resource type="ArrayMesh" uid="uid://bu056e2jnnxcd" path="res://Assets/Architecture/Appliances/StandardCabinet.obj" id="15_vguf5"]
-[ext_resource type="Script" uid="uid://bvffofjq5eep5" path="res://Scenes/end.gd" id="16_pgfid"]
+[ext_resource type="Script" path="res://Scenes/end.gd" id="16_pgfid"]
 [ext_resource type="ArrayMesh" uid="uid://d2eml6iabh6l8" path="res://Assets/Architecture/Appliances/LPOven.obj" id="16_rpl3l"]
 [ext_resource type="ArrayMesh" uid="uid://b4ohsicbxsilt" path="res://Assets/Architecture/Appliances/LPSinkCabinet.obj" id="18_2qood"]
 [ext_resource type="ArrayMesh" uid="uid://bmx0fk3quyat" path="res://Assets/Architecture/Appliances/MiniUpperCabinet.obj" id="18_68did"]

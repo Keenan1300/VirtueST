@@ -1,12 +1,12 @@
 [gd_scene load_steps=20 format=3 uid="uid://ba033ajbcsdci"]
 
-[ext_resource type="Script" uid="uid://b862dhch46jtj" path="res://Scenes/ziphili_xworld.gd" id="1_8bp4o"]
+[ext_resource type="Script" path="res://Scenes/ziphili_xworld.gd" id="1_8bp4o"]
 [ext_resource type="PackedScene" uid="uid://cjdtvppm8xdhv" path="res://Scenes/ZIPHILIX.tscn" id="1_qnpwg"]
 [ext_resource type="PackedScene" uid="uid://1caqd5o21n0y" path="res://Scenes/player_v.tscn" id="2_3vjau"]
 [ext_resource type="AudioStream" uid="uid://bl2rgf3xq1tbt" path="res://Audio/SoundEffects/Songs/InbetweenFinal.mp3" id="2_8bp4o"]
 [ext_resource type="Script" uid="uid://5o2hhfm88w63" path="res://Scenes/ziphilix.gd" id="2_tfu8q"]
 [ext_resource type="Script" uid="uid://d08qnqtkdkow5" path="res://Scenes/portalback.gd" id="3_20hjk"]
-[ext_resource type="Script" uid="uid://msbwnvmn0oia" path="res://Scenes/ziph_interaction.gd" id="4_50ees"]
+[ext_resource type="Script" path="res://Scenes/ziph_interaction.gd" id="4_50ees"]
 [ext_resource type="Script" uid="uid://kkfclb18d72k" path="res://Scenes/InteractEPopup.gd" id="7_8bp4o"]
 [ext_resource type="PackedScene" uid="uid://digyc81wilcv4" path="res://Scenes/DialogueBars.tscn" id="8_e4faq"]
 

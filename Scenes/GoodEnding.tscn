@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpg5kxgas1df0"]
 
-[ext_resource type="Script" uid="uid://bkee76k8m88n5" path="res://Scenes/good_ending.gd" id="1_15kgp"]
+[ext_resource type="Script" path="res://Scenes/good_ending.gd" id="1_15kgp"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ql5sq"]
 
@@ -31,6 +31,7 @@ mesh = SubResource("QuadMesh_ql5sq")
 texture = SubResource("CanvasTexture_c1cf0")
 
 [node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
 offset_right = 936.0
 offset_bottom = 274.0
 scale = Vector2(1, 0.99789)
@@ -39,6 +40,7 @@ text = "GOOD ENDING
 After speaking with your prosecutors, you've won the case and saved humanity"
 
 [node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 113.0
 offset_right = 46.0
