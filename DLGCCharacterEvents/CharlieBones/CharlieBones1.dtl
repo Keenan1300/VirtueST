@@ -18,7 +18,7 @@ else:
 		CharlieBones: Just some bones.
 		CharlieBones: ...
 		jump CharlieConvo
-	- why are you here?
+	- Are you my client?
 		CharlieBones: 'fraid not.
 		jump CharlieConvo
 	- (Leave Conversation)

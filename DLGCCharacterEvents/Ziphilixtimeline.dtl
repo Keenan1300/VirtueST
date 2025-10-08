@@ -1,4 +1,5 @@
 [signal arg="CONVOSTART"]
+audio "res://Audio/SoundEffects/ZiphilixSound.wav"
 set {ZiphEnlighten} = false
 Ziphilix: BANANAS ARENT REAL YOU INVENTED THEM IN A DREAM
 Ziphilix: WAKE UP

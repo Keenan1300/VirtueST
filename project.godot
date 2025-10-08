@@ -34,6 +34,7 @@ directories/dtl_directory={
 "IntroIntoHouseINT": "res://DLGCSceneEvents/IntroIntoHouseINT.dtl",
 "IntroTimeline": "res://DLGCCharacterEvents/IntroTimeline.dtl",
 "ScenebeforeClaud": "res://DLGCSceneEvents/ScenebeforeClaud.dtl",
+"ShouldntGoHere": "res://DLGCSceneEvents/ShouldntGoHere.dtl",
 "THISISLOCKED": "res://DLGCSceneEvents/THISISLOCKED.dtl",
 "Ziphilixtimeline": "res://DLGCCharacterEvents/Ziphilixtimeline.dtl",
 "timeline": "res://DLGCCharacterEvents/CharlieBones/timeline.dtl"
